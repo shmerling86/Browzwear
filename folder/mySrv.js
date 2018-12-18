@@ -67,7 +67,6 @@ app.factory('mySrv', function ($q, $http) {
                     var address = street + ", " + city
                 }
             }
-            console.log(address);
             async.resolve(address);
         }, function (response) {
             console.error(response)
