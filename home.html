@@ -1,0 +1,43 @@
+<section>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-12 mx-auto">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Countries</th>
+                            <th>Cities</th>
+                            <th>Companies</th>
+                            <th>Map</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding:0.75rem 0">
+                                <ul class="list-group shadow">
+                                    <li class="list-group-item list-group-item-action" ng-click='showMyCities(country);select($index);'
+                                        ng-repeat='country in countries' ng-class="{'active': $index == selected}">{{country}}</li>
+                                </ul>
+                            </td>
+                            <td style="padding:0.75rem 0">
+                                <ul class="list-group shadow">
+                                    <li class="list-group-item list-group-item-action" ng-click='showMyCompanies(city);selectCity($index);alfa=true'
+                                        ng-repeat='city in cities' ng-class="{'active': $index == selectedCity}">{{city}}</li>
+                                </ul>
+                            </td>
+                            <td style="padding:0.75rem 0">
+                                <ul class="list-group shadow">
+                                    <li class="list-group-item list-group-item-action" ng-click='selectCompany($index);getMyAddress(company)'
+                                        ng-repeat='company in companies  | orderBy: alfa' ng-class="{'active': $index == selectedCompany}">{{company}}</li>
+                                </ul>
+                            </td>
+                            <td class="col-6">
+                                <div class="shadow" id="map"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
