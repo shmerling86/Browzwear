@@ -6,7 +6,7 @@ app.controller('myCtrl', function (mySrv, $scope) {
     function initialize(loc) {
         
         $scope.locationOfCompany = [
-            { lat: 44.027090, lng: -123.072900 },
+            { lat: 44.0284944, lng: -123.0731791 },
         ];
         
         if (loc) {
